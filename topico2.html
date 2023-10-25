@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Matéria N1</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Matéria N1</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Página Inicial</a></li>
+            <li><a href="topico2.html">N1</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h1>Complexidade na Economia de Recursos</h1>
+        <p>A complexidade desempenha um papel fundamental na economia de recursos, pois influencia diretamente a otimização de sistemas e processos. A capacidade de gerenciar eficazmente a complexidade pode resultar em economias significativas.</p>
+    
+        <h2>Otimização</h2>
+        <p>A otimização é um conceito-chave quando se trata de economia de recursos. Envolve a melhoria de sistemas e processos para alcançar o melhor desempenho possível, tanto em termos de tempo de acesso quanto no uso eficiente de recursos, como processamento e armazenamento.</p>
+    
+        <h2>Tempo de Acesso</h2>
+        <p>A otimização do tempo de acesso é crucial em diversas aplicações, desde bancos de dados até sites. Reduzir o tempo necessário para recuperar informações pode melhorar a eficiência e a satisfação do usuário.</p>
+    
+        <h2>Recursos de Processamento</h2>
+        <p>A alocação eficiente de recursos de processamento é essencial para economizar energia e custos. A otimização aqui envolve a minimização do processamento redundante ou ineficaz.</p>
+    
+        <h2>Armazenamento</h2>
+        <p>A otimização do armazenamento é vital para sistemas que lidam com grandes volumes de dados. Reduzir o espaço de armazenamento necessário não apenas economiza recursos, mas também melhora a eficiência na recuperação de informações.</p>
+    
+        <p>Em resumo, compreender e gerenciar a complexidade é essencial para otimizar o tempo de acesso e o uso eficiente dos recursos, incluindo processamento e armazenamento. Essa otimização desempenha um papel crítico na economia de recursos em vários domínios, resultando em benefícios econômicos e operacionais significativos.</p>
+    </section>
+    <section>
+        <h1>Ordens Assintóticas</h1>
+        <p>À medida que o argumento de uma função cresce ou diminui infinitamente, isto é, fica muito grande ou muito pequeno, realizamos uma análise assintótica da função para determinar sua complexidade por meio de uma representação generalista. Essa representação segue três notações principais:</p>
+    
+        <p><strong>O(f(n)) → BG-o:</strong> Essa notação define um limite superior assintótico para a função.</p>
+    
+        <p><strong>Omega(f(n)) → Notação ômega:</strong> Essa notação define um limite inferior assintótico para a função.</p>
+    
+        <p><strong>o(f(n)) = lim f(n) n→∞</strong></p>
+    
+        <h2>Exemplo:</h2>
+        <p>O(f(n) = O(n²) = n²</p>
+        <ul>
+            <li>Polinomial de segundo grau.</li>
+            <li>Custo quadrático.</li>
+        </ul>
+    </section>
+    <section>
+        <h1>Análise de Complexidade Pessimista</h1>
+    <p>Cp = [a] := máx { desempenho a / tamanho (d) = n};</p>
+    <p>Cp ≤[a] := máx { desempenho a / tamanho (d) ≤ n};</p>
+
+    <h2>Definições:</h2>
+    <ul>
+        <li>Onde desempenho [a] := custo (execução a).</li>
+        <li>Cp → complexidade pessimista</li>
+        <li>a → algoritmo</li>
+        <li>n → tamanho da entrada</li>
+        <li>desempenho → desempenho</li>
+        <li>tamanho → tamanho da entrada</li>
+        <li>d → entrada de dados de um conjunto D e IR =.</li>
+        <li>= > tamanho(d) = n</li>
+    </ul>
+
+    <h2>Operações com Funções:</h2>
+    <p>Considere duas funções f e g de um conjunto D de dados em IR. Sua soma pontual, dada por</p>
+    <p>(f+g)(d):= k(d) + g(d), para cada d e D</p>
+    <p>Logo, seu máximo e mínimo pontuais são dados por:</p>
+    <ul>
+        <li>Máx (f, g)(d) := Máx [f(d), g(d)]</li>
+        <li>Min (f, g)(d) := Min [f(d), g(d)]</li>
+    </ul>
+
+    <h2>Exemplo:</h2>
+    <p>f (n) := n + 1</p>
+    <p>g(n):= n^2</p>
+    <p>Domínio: IN → IN (números inteiros)</p>
+    </section>
+    <section>
+        <h1>Complexidade Média</h1>
+    <p>Cm a:= ∑ [prob(d). desempenho a]</p>
+
+    <h2>Definições:</h2>
+    <ul>
+        <li>onde dn = {d E D | tamanho (d) = n}</li>
+        <li>prob (d) é a probabilidade de ocorrer a entrada d de Dn</li>
+        <li>desempenho a = custo (execução a) do algoritmo a com entrada d.</li>
+    </ul>
+
+    <h2>Exemplo Clássico de Complexidade Média: QuickSort</h2>
+
+    <p>Função QuickSort (A:V, m, p:Nat) → A:V {Ordenação por concatenação}</p>
+    <p>Entrada: Vetor A[m..p] (A Ordenar)</p>
+    <p>Saída: Vetor A:V (o vetor de entrada em ordem crescente)</p>
+
+    <p>Sorte V:= vetor [m..p]</p>
+    <p>k <- ind (pivo, A, m, p); {inicializa k com índice do pivô}</p>
+    <p>Se k=o</p>
+    <p>Então retorne-saída (a) {vetor já está classificado}</p>
+    <p>Senão</p>
+    <p>Inicia a classificação:</p>
+    <p>Troca (A[m], A[k]); {troca o primeiro com o pivô}</p>
+    <p>Particiona (A, m, p, j); {particiona na posição j}</p>
+    <p>l' <- quicksort (A, m, j-1); {classifica início (tamanho j-m)}</p>
+    <p>l'' <- quicksort (A, j, p); {classifica final (tamanho p-j+1)}</p>
+    <p>l <- concat (l', l''); {concatena partes classificadas}</p>
+    <p>Retorne-saída (A); {da saída concatenada}</p>
+    <p>Fim-senão {fim da classificação}</p>
+    <p>Fim-se {k=o ?}</p>
+    <p>Fim-função {fim do algoritmo}</p>
+</body>
+    </section>
+    <section>
+        <h1>Por que a Complexidade de Algoritmos é Importante?</h1>
+        <p>A Complexidade de Algoritmos desempenha um papel fundamental na otimização do desempenho de nossos programas e sistemas computacionais.</p>
+        
+        <p>Ela nos permite entender o comportamento dos algoritmos à medida que o tamanho dos dados aumenta, capacitando-nos a tomar decisões informadas.</p>
+    
+        <h2>Conceitos Fundamentais</h2>
+        <ol>
+            <li>
+                <strong>Notação "Big O":</strong> A Notação "Big O" (O(n), O(log n)) é o idioma que usamos para expressar o crescimento do tempo de execução em relação ao tamanho dos dados.
+            </li>
+            <li>
+                <strong>Classes de Complexidade:</strong> A Classificação de Complexidade (P, NP, NP-hard) nos ajuda a categorizar problemas com base na sua dificuldade computacional.
+            </li>
+            <li>
+                <strong>Algoritmos de Ordenação:</strong> Examinaremos como algoritmos de ordenação ilustram a diferença entre eficiência e ineficiência na resolução de problemas.
+            </li>
+        </ol>
+    </section>
+    <section>
+        <h2>Importância Prática</h2>
+        <p>A compreensão da Complexidade de Algoritmos é a espinha dorsal de software eficiente, economizando tempo e recursos.</p>
+        
+        <p>É aplicável em várias áreas, incluindo inteligência artificial, análise de dados e muito mais.</p>
+    </section>
+        <section>
+            <h1>Complexidade do Algoritmo QuickSort</h1>
+            <p>O algoritmo QuickSort tem uma complexidade de tempo de O(n log n) no caso médio e O(n^2) no caso pior.</p>
+            
+            <p>O caso médio ocorre quando o pivô é escolhido de forma que o array seja dividido em duas partes aproximadamente iguais em cada recursão. Nesse caso, o algoritmo executa T(n/2) + n comparações a cada recursão, onde T(n) é o tempo de execução do algoritmo para um array de tamanho n. Isso nos leva à seguinte equação de recorrência:</p>
+            
+            <p>T(n) = T(n/2) + n</p>
+            
+            <p>Resolvendo essa equação de recorrência, obtemos a complexidade O(n log n).</p>
+            
+            <p>O caso pior ocorre quando o pivô é sempre escolhido como o menor ou maior elemento do array. Nesse caso, o array é dividido em uma parte grande e uma parte pequena a cada recursão, o que leva a um tempo de execução de O(n^2).</p>
+            
+            <p>Na prática, o QuickSort é um algoritmo muito rápido e eficiente, e é um dos algoritmos de ordenação mais utilizados.</p>
+            
+            <p>No código fornecido, o algoritmo QuickSort é implementado de forma a evitar o caso pior, escolhendo o elemento mais à direita do array como pivô. Isso garante que o array seja dividido em duas partes aproximadamente iguais a cada recursão, o que leva à complexidade O(n log n) no caso médio.</p>    </section>
+
+</body>
+<footer>
+    <p>© 2023 Luiz Guilherme Rodrigues Lins. Todos os direitos reservados.</p>
+</footer>
+</html>
