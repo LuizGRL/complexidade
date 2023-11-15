@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Matéria N1</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+
+<body>
+    <header>
+        <h1>Matéria N2        </h1>
+        
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Página Inicial</a></li>
+            <li><a href="n1.html">N1</a></li>
+            <li><a href="n2.html">N2</a></li>
+
+        </ul>
+    </nav>
+    <section>
+
+    
+        <h1>Algoritmos Gulosos e Programação Dinâmica</h1>
+
+        <h2>Algoritmos Gulosos (Greedy Algorithms)</h2>
+    
+        <p>
+            Os algoritmos gulosos seguem a estratégia de fazer a escolha localmente ótima a cada etapa com a esperança de que essas escolhas locais levem a uma solução globalmente ótima. Em cada passo do algoritmo, a escolha é feita com base no critério atual, sem considerar o impacto global futuro.
+        </p>
+    
+        <h3>Características dos Algoritmos Gulosos:</h3>
+        <ul>
+            <li>Escolha Gulosa: Cada etapa faz uma escolha que parece ser a melhor no momento, sem considerar as escolhas futuras.</li>
+            <li>Não há volta: As escolhas feitas são irreversíveis. Uma vez tomada uma decisão, ela não é revista.</li>
+            <li>Não garante a melhor solução global: Por conta de suas escolhas locais, os algoritmos gulosos podem não garantir a melhor solução global.</li>
+        </ul>
+    
+        <h3>Exemplo de Problema: Algoritmo de Troco (Change-making)</h3>
+        <p>
+            Dado um conjunto de moedas, encontre a combinação de moedas que forma um determinado valor com o menor número possível de moedas.
+        </p>
+    
+        <h2>Algoritmos de Programação Dinâmica</h2>
+    
+        <p>
+            Os algoritmos de programação dinâmica são projetados para problemas de otimização onde a solução ótima pode ser construída a partir de soluções ótimas de subproblemas menores. Esses algoritmos quebram o problema em subproblemas menores e resolvem cada subproblema apenas uma vez, armazenando suas soluções para evitar o recálculo.
+        </p>
+    
+        <h3>Características dos Algoritmos de Programação Dinâmica:</h3>
+        <ul>
+            <li>Subestrutura Ótima: A solução global pode ser construída a partir de soluções ótimas para subproblemas menores.</li>
+            <li>Superposição de Subproblemas: O algoritmo resolve cada subproblema apenas uma vez e armazena suas soluções para evitar recálculos.</li>
+            <li>Backtracking ou Recursão: Frequentemente, são usadas técnicas de backtracking ou recursão na implementação.</li>
+        </ul>
+    
+    
+        <h2>Comparação</h2>
+    
+        <p>
+            - Algoritmos Gulosos: São mais simples e geralmente mais rápidos, mas não garantem sempre a melhor solução global.<br>
+            - Programação Dinâmica: Pode ser mais complexa, exigindo mais tempo e espaço, mas garante a obtenção da solução ótima.
+        </p>
+</section> 
+<section>
+    <h1>Algoritmo de Dijkstra</h1>
+
+    <h2>1. Inicialização:</h2>
+    <ul>
+        <li>Crie um conjunto de vértices cujos caminhos mais curtos conhecidos a partir do vértice de origem são definitivos.</li>
+        <li>Atribua uma distância inicial de zero para o vértice de origem e infinito para todos os outros vértices.</li>
+        <li>Inicialize o conjunto de vértices visitados como vazio.</li>
+    </ul>
+
+    <h2>2. Iteração:</h2>
+    <ul>
+        <li>Enquanto houver vértices não visitados:</li>
+        <ul>
+            <li>Escolha o vértice não visitado com a menor distância conhecida.</li>
+            <li>Marque esse vértice como visitado.</li>
+            <li>Atualize as distâncias dos vizinhos não visitados desse vértice. A distância atualizada é a soma da distância conhecida até o vértice escolhido e o peso da aresta que leva ao vizinho.</li>
+        </ul>
+    </ul>
+
+    <h2>3. Resultado:</h2>
+    <ul>
+        <li>Após a conclusão do algoritmo, a menor distância conhecida de origem para cada vértice é determinada.</li>
+    </ul>
+
+    <p>
+        O algoritmo de Dijkstra pode ser implementado usando uma fila de prioridade para escolher eficientemente o próximo vértice a ser processado, garantindo que sempre escolhamos o vértice com a menor distância conhecida.
+    </p>
+
+    <p>
+        A complexidade de tempo do algoritmo de Dijkstra depende da implementação, mas geralmente é O((V + E) log V), onde V é o número de vértices e E é o número de arestas no grafo.
+    </p>
+
+    <p>
+        É importante notar que o algoritmo de Dijkstra não funciona corretamente em grafos com pesos negativos, pois a escolha do vértice mais próximo pode não ser segura em tais casos. Para grafos com pesos negativos, é mais apropriado usar o algoritmo de Bellman-Ford.
+    </p>
+</section>
+<section>
+    <h1>Algoritmos de Divisão e Conquista</h1>
+
+    <p>
+        A estratégia de divisão e conquista é uma técnica de resolução de problemas que consiste em dividir um problema maior em subproblemas menores, resolvê-los de forma independente e combinar suas soluções para obter a solução do problema original.</p>
+
+    <ol>
+        <li>
+            <h2>Merge Sort:</h2>
+            <p>Ordena uma lista dividindo-a pela metade, ordenando recursivamente cada metade e mesclando as duas metades ordenadas.</p>
+        </li>
+
+        <li>
+            <h2>Quick Sort:</h2>
+            <p>Divide uma lista em torno de um elemento escolhido (pivô) e, em seguida, ordena recursivamente as sub-listas antes e após o pivô.</p>
+        </li>
+
+        <li>
+            <h2>Binary Search:</h2>
+            <p>Busca eficientemente por um elemento em uma lista ordenada, dividindo repetidamente a lista ao meio até encontrar o elemento desejado.</p>
+        </li>
+
+        <li>
+            <h2>Strassen's Algorithm (Multiplicação de Matrizes):</h2>
+            <p>Multiplica duas matrizes dividindo-as em submatrizes menores e combinando as soluções parciais.</p>
+        </li>
+
+        <li>
+            <h2>Closest Pair of Points:</h2>
+            <p>Encontra o par de pontos mais próximos em um conjunto bidimensional dividindo o problema em subconjuntos menores e encontrando a solução para cada subconjunto.</p>
+        </li>
+
+        <li>
+            <h2>Karatsuba Algorithm (Multiplicação de Números Grandes):</h2>
+            <p>Multiplica dois números grandes dividindo-os em partes menores, realizando multiplicações recursivas e combinando os resultados.</p>
+        </li>
+
+        <li>
+            <h2>Strassen's Matrix Chain Multiplication:</h2>
+            <p>Otimiza a multiplicação de várias matrizes, dividindo o problema em subproblemas menores e combinando as soluções.</p>
+        </li>
+
+        <li>
+            <h2>Counting Inversions:</h2>
+            <p>Conta o número de inversões em uma lista, dividindo o problema em subproblemas menores e combinando as contagens de inversões.</p>
+        </li>
+
+        <li>
+            <h2>Maximum Subarray Sum (Kadane's Algorithm):</h2>
+            <p>Encontra a sublista contígua de maior soma em um array, dividindo o problema em subproblemas menores e combinando as soluções.</p>
+        </li>
+
+        <li>
+            <h2>Closest Pair of Points in 3D:</h2>
+            <p>Extensão do algoritmo para o par mais próximo de pontos em três dimensões.</p>
+        </li>
+
+        <li>
+            <h2>FFT (Fast Fourier Transform):</h2>
+            <p>Calcula a transformada rápida de Fourier de um conjunto de dados, dividindo o problema em subproblemas menores e combinando as soluções.</p>
+        </li>
+    </ol>
+
+</section>
+<section>
+    <h1>Complexidade de Problemas</h1>
+
+    <h2>Complexidade de Tempo</h2>
+    <p>
+        A complexidade de tempo de um problema é uma medida do número de operações elementares (como comparações, atribuições, etc.) executadas por um algoritmo para resolver o problema em função do tamanho da entrada. Essa medida é geralmente expressa em notação assintótica, como o Big O (<code>O</code>).
+    </p>
+
+    <h3>Exemplo:</h3>
+    <p>
+        Se um algoritmo de ordenação tem uma complexidade de tempo <code>O(n^2)</code>, isso significa que o número de operações elementares aumenta quadraticamente com o tamanho da entrada.
+    </p>
+
+    <h2>Complexidade de Espaço</h2>
+    <p>
+        A complexidade de espaço refere-se à quantidade de memória (espaço) que um algoritmo consome para resolver um problema em função do tamanho da entrada. Similar à complexidade de tempo, a complexidade de espaço é expressa em notação assintótica.
+    </p>
+
+    <h3>Exemplo:</h3>
+    <p>
+        Se um algoritmo de ordenação usa <code>O(n)</code> de espaço adicional, isso significa que o espaço necessário para ordenar <code>n</code> elementos é linear em relação a <code>n</code>.
+    </p>
+
+    <h2>Classes de Complexidade</h2>
+    <p>
+        Existem classes de complexidade que categorizam os problemas com base na dificuldade relativa. Duas classes notáveis são <code>P</code> (problemas solucionáveis em tempo polinomial) e <code>NP</code> (problemas cujas soluções podem ser verificadas em tempo polinomial).
+    </p>
+
+    <h3>P (Polinomial):</h3>
+    <p>
+        Refere-se a problemas que podem ser resolvidos em tempo polinomial, ou seja, <code>O(n^k)</code> para algum <code>k</code>, onde <code>n</code> é o tamanho da entrada.
+    </p>
+
+    <h3>NP (Não Determinístico Polinomial):</h3>
+    <p>
+        Refere-se a problemas para os quais uma solução, uma vez proposta, pode ser verificada em tempo polinomial. Resolver problemas NP em tempo polinomial ainda é uma questão em aberto (P = NP ou P ≠ NP).
+    </p>
+
+    <h2>Teorema de Cook-Levin</h2>
+    <p>
+        O teorema de Cook-Levin estabelece a NP-completude, uma propriedade de certos problemas em NP que são tão difíceis quanto o problema mais difícil em NP. Problemas NP-completos têm uma relação especial com a classe NP e são um ponto focal na teoria da complexidade computacional.
+    </p>
+
+</section>
+</body>
+
+<footer>
+    <p>© 2023 Luiz Guilherme Rodrigues Lins. Todos os direitos reservados.</p>
+</footer>
+</html>
+
